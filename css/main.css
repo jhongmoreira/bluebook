@@ -1,0 +1,10 @@
+.carousel-item{
+    height: 350px;
+}
+
+.categoria{
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 0 !important;
+}
