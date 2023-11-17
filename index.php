@@ -7,6 +7,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="SG+ - Informação e Entretenimento em São Gotardo e Região">
+    <meta property="og:description" content="Notícia e entretenimento para toda São Gotardo e região">
+    <meta property="og:image" content="img/site/logo.svg">
     <title>SG+ - Informação e Entretenimento em São Gotardo e Região</title>
     <link rel="stylesheet" href="css/main.css">
     <!-- Bootstrap CSS -->
