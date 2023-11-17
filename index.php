@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SG+ - Informação e Entretenimento em São Gotardo e Região</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="cdn/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="cdn/fa/css/fontawesome.min.css">
+    <link rel="stylesheet" href="cdn/fa/css/brands.min.css">
+    <link rel="stylesheet" href="cdn/fa/css/solid.min.css">
+</head>
+<body>
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none me-3">
+              <img src="img/site/logo.svg" alt="Logotipo" width="40" height="32">
+            </a>
+    
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">Feed</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">Currículos</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">WebTV</a></li>
+            </ul>
+    
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+              <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+            </form>
+    
+            <div class="text-end">
+              <button type="button" class="btn btn-warning">Pesquisar</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+        <div id="destaques" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#destaques" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#destaques" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <!-- <button type="button" data-bs-target="#destaques" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
+            </div>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="banner-1"></div>
+                <div class="container texto-container">
+                  <div class="carousel-caption text-start">
+                    <h1>Supermercado Central</h1>
+                    <p>Sua compra com o melhor preço da cidade.</p>
+                    <p><a class="btn btn-sm btn-primary" href="#">Acessar Feed</a></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="banner-2"></div>
+                <div class="container">
+                  <div class="carousel-caption">
+                    <h1>Farmácia São Sebastião</h1>
+                    <p>Descontos imperdíveis em medicamentos genéricos</p>
+                    <p><a class="btn btn-sm btn-primary" href="#">Acessar Feed</a></p>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+                <div class="container">
+                  <div class="carousel-caption text-end">
+                    <h1>One more for good measure.</h1>
+                    <p>Some representative placeholder content for the third slide of this carousel.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#destaques" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#destaques" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="container-fluid mt-4">
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 text-primary-emphasis">São Gotardo</strong>
+                  <h3 class="mb-0">Prefeitura de São Gotardo inicia reforma na Santa Casa</h3>
+                  <div class="mb-1 text-body-secondary">Nov 12</div>
+                  <p class="card-text mb-auto">Expectativa é que as obras fiquem prontas até Novembro de 2025.</p>
+                  <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                    Ler
+                    <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+                  </a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                  <img src="img/conteudo/thumb-noticia-1.png" height="250" alt="" srcset="">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">              
+              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 text-success-emphasis">Região</strong>
+                  <h3 class="mb-0">Acidente grave na BR254 em direção á Campos Altos termina em tragédia</h3>
+                  <div class="mb-1 text-body-secondary">Nov 11</div>
+                  <p class="mb-auto">Duas pessoas ficaram feridas e outra morreu.</p>
+                  <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                    Ler
+                    <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+                  </a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                  <img src="img/conteudo/thumb-noticia-2.png" height="250" alt="" srcset="">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 text-primary-emphasis">Mundo</strong>
+                  <h3 class="mb-0">Papa Francisco visita básilica de Nossa Senhora da Anunciação</h3>
+                  <div class="mb-1 text-body-secondary">Nov 10</div>
+                  <p class="card-text mb-auto">Básilica passou por reformar afim de preservar sua história.</p>
+                  <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                    Ler
+                    <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+                  </a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                  <img src="img/conteudo/thumb-noticia-3.png" height="250" alt="" srcset="">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 text-success-emphasis"> <div class="badge text-bg-warning">PATROCINADO</div> </strong>
+                  <h3 class="mb-0">Drogaria Central está com descontos em medicamentos genéricos</h3>
+                  <div class="mb-1 text-body-secondary">Nov 11</div>
+                  <p class="mb-auto">Medicamentos genéricos estão com até 90% de descontos e outros com até 20%.</p>
+                  <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                    Ler
+                  </a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                  <img src="img/conteudo/thumb-noticia-4.png" height="250" alt="" srcset="">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 mt-4 mb-5 d-flex justify-content-center">
+              <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                Ver todas as Notícias
+              </a>
+            </div>
+          </div>
+
+          
+
+          <div class="row">
+            <div class="col-md-3 mb-4">
+                <div class="card p-1">
+                    <img src="img/conteudo/logo_exata.png" class="card-img-top" alt="Logotipo da Exata Serviços">
+                    <!-- <div class="card-body"> -->
+                      <!-- <h5 class="card-title">Empresa Teste 01</h5> -->
+                      <!-- <p class="card-text">Empresa de Marketing/Publicidade.</p> -->
+                      <!-- <small>Marketing/Publicidade</small> -->
+                    <!-- </div> -->
+                    <span class="categoria badge text-bg-primary">Marketing</span>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item"><small><i class="fa-brands fa-whatsapp"></i> (34) 3671-1763</small></li>
+                    </ul>
+                    <!-- <div class="card-body">
+                      <a href="#" class="card-link btn btn-sm btn-warning"><i class="fa fa-user"></i> Perfil</a>
+                    </div> -->
+                  </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <div class="card p-1">
+                    <img src="img/conteudo/logo_eficaz.png" class="card-img-top" alt="Logotipo da Exata Serviços">
+                    <!-- <div class="card-body"> -->
+                      <!-- <h5 class="card-title">Empresa Teste 01</h5> -->
+                      <!-- <p class="card-text">Empresa de Marketing/Publicidade.</p> -->
+                      <!-- <small>Marketing/Publicidade</small> -->
+                    <!-- </div> -->
+                    <span class="categoria badge text-bg-warning">Serviços Gerais</span>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item"><small><i class="fa-brands fa-whatsapp"></i> (34) 3671-3854</small></li>
+                    </ul>
+                    <!-- <div class="card-body">
+                      <a href="#" class="card-link btn btn-sm btn-warning"><i class="fa fa-user"></i> Perfil</a>
+                    </div> -->
+                  </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <div class="card p-1">
+                    <img src="img/conteudo/logo_arquiplant.png" class="card-img-top" alt="Logotipo da Exata Serviços">
+                    <!-- <div class="card-body"> -->
+                      <!-- <h5 class="card-title">Empresa Teste 01</h5> -->
+                      <!-- <p class="card-text">Empresa de Marketing/Publicidade.</p> -->
+                      <!-- <small>Marketing/Publicidade</small> -->
+                    <!-- </div> -->
+                    <span class="categoria badge text-bg-secondary">Construção Civil</span>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item"><small><i class="fa-brands fa-whatsapp"></i> (34) 3671-5585</small></li>
+                    </ul>
+                    <!-- <div class="card-body">
+                      <a href="#" class="card-link btn btn-sm btn-warning"><i class="fa fa-user"></i> Perfil</a>
+                    </div> -->
+                  </div>
+            </div>
+
+            
+            <div class="col-md-3 mb-4">
+                <div class="card p-1">
+                    <img src="img/conteudo/logo_moreira.png" class="card-img-top" alt="Logotipo da Exata Serviços">
+                    <!-- <div class="card-body"> -->
+                      <!-- <h5 class="card-title">Empresa Teste 01</h5> -->
+                      <!-- <p class="card-text">Empresa de Marketing/Publicidade.</p> -->
+                      <!-- <small>Marketing/Publicidade</small> -->
+                    <!-- </div> -->
+                    <span class="categoria badge text-bg-danger">Alimentação</span>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item"><small><i class="fa-brands fa-whatsapp"></i> (34) 3671-1023</small></li>
+                    </ul>
+                    <!-- <div class="card-body">
+                      <a href="#" class="card-link btn btn-sm btn-warning"><i class="fa fa-user"></i> Perfil</a>
+                    </div> -->
+                  </div>
+            </div>
+            <div class="col-md-12 mt-5 mb-5 d-flex justify-content-center">
+              <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                Ver Empresas
+              </a>
+            </div>
+          </div>
+
+          <!-- Vagas de Emprego -->
+          <section class="row">
+
+            <div class="col-md-3 mb-2">
+              <div class="text-center">
+                <img src="img/conteudo/logo_moreira.png" height="50px" alt="" srcset="">
+              </div>
+              <h4>Ajudante de Cozinha</h4>  
+              <p class="m-0"><i class="fa-solid fa-money-bill"></i> R$ 1.600,00</p>
+              <p class="m-0"><i class="fa-solid fa-graduation-cap"></i> Ensino Fundamental</p>
+              <a href="#">
+                <i class="mt-2 fa-solid fa-circle-plus"></i>
+              </a>            
+            </div>
+
+            <div class="col-md-3 mb-2">
+              <div class="text-center">
+                <img src="img/conteudo/logo_exata.png" height="50px" alt="" srcset="">
+              </div>
+              <h4>Designer Gráfico</h4>  
+              <p class="m-0"><i class="fa-solid fa-money-bill"></i> <i>A combinar</i></p>
+              <p class="m-0"><i class="fa-solid fa-graduation-cap"></i> Ensino Superior</p>
+              <a href="#">
+                <i class="mt-2 fa-solid fa-circle-plus"></i>
+              </a>            
+            </div>
+
+            <div class="col-md-3 mb-2">
+              <div class="text-center">
+                <img src="img/conteudo/logo_eficaz.png" height="50px" alt="" srcset="">
+              </div>
+              <h4>Ajudante de Serviços</h4>  
+              <p class="m-0"><i class="fa-solid fa-money-bill"></i> <i>A combinar</i></p>
+              <p class="m-0"><i class="fa-solid fa-graduation-cap"></i> Ensino Fundamental</p>
+              <a href="#">
+                <i class="mt-2 fa-solid fa-circle-plus"></i>
+              </a>            
+            </div>
+
+            <div class="col-md-3 mb-2">
+              <div class="text-center">
+                <img src="img/conteudo/logo_arquiplant.png" height="50px" alt="" srcset="">
+              </div>
+              <h4>Pedreiro</h4>  
+              <p class="m-0"><i class="fa-solid fa-money-bill"></i> R$ 3.200</p>
+              <p class="m-0"><i class="fa-solid fa-graduation-cap"></i> Ensino Fundamental</p>
+              <a href="#">
+                <i class="mt-2 fa-solid fa-circle-plus"></i>
+              </a>            
+            </div>
+
+            <div class="col-md-12 mt-5 mb-5 d-flex justify-content-center">
+              <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                Ver todas as Vagas
+              </a>
+            </div>
+
+          </section>
+
+      </div>
+
+      
+
+      <footer class="py-3 my-1">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Afilie-se</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">SAC</a></li>
+        </ul>
+        <p class="text-center text-body-secondary">© 2023 SG+</p>
+      </footer>
+    
+
+<!-- JavaScript CSS -->
+<script src="cdn/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
