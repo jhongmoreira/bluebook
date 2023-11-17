@@ -7,9 +7,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="SG+ - Informação e Entretenimento em São Gotardo e Região">
-    <meta property="og:description" content="Notícia e entretenimento para toda São Gotardo e região">
-    <meta property="og:image" content="img/site/logo.svg">
     <title>SG+ - Informação e Entretenimento em São Gotardo e Região</title>
     <link rel="stylesheet" href="css/main.css">
     <!-- Bootstrap CSS -->
@@ -31,7 +28,7 @@
               <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
               <li><a href="#" class="nav-link px-2 text-white">Feed</a></li>
               <li><a href="#" class="nav-link px-2 text-white">Currículos</a></li>
-              <li><a href="#" class="nav-link px-2 text-white">WebTV</a></li>
+              <li><a href="index.php?pg=3" class="nav-link px-2 text-white">WebTV</a></li>
             </ul>
     
             <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">

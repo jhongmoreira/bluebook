@@ -28,6 +28,10 @@ class Pagina
       case 2:
         include "./todas_noticias.php";
         break;
+
+      case 3:
+        include "./webtv.php";
+        break;
   }
 }
 }
