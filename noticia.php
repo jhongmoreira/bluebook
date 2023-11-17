@@ -15,7 +15,7 @@
 <div class="container-fluid mt-4">
   <div class="row">
 
-    <div class="col-md-8"><h1><?php echo $dados['titulo']; ?></h1></div>
+    <div class="col-md-12"><h1><?php echo $dados['titulo']; ?></h1></div>
 
     <div class="col-md-12"><h4><?php echo $dados['subtitulo']; ?></h4></div>
     
