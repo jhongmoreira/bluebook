@@ -18,3 +18,16 @@
     top: 0;
     border-radius: 0 !important;
 }
+
+.card{
+    border-color: orange !important;
+}
+
+.card i{
+    color: green !important;
+}
+
+.card .btn-warning i{
+    color: black !important;
+    font-weight: bold;
+}
