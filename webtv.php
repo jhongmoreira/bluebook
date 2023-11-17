@@ -14,8 +14,7 @@
       <script>
         var myvid = document.getElementById('myvideo');
         var myvids = [
-          "videos/webtv/1.mp4", 
-          "videos/webtv/2.mp4"
+          "videos/webtv/2.mp4", 
           ];
         var activeVideo = 0;
 
@@ -29,7 +28,7 @@
         });
       </script>
 
-      <video src="videos/webtv/1.mp4" id="myvideo" width="320" height="240" controls style="background:black">
+      <video src="videos/webtv/2.mp4" id="myvideo" width="720" height="480" controls style="background:black">
       </video>
 
     </div>

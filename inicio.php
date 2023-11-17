@@ -44,6 +44,13 @@
 
         <div class="container-fluid mt-4">
 
+        <div class="row">
+          <div class="col-md-12 mb-3">
+            <h2>Atualizações</h2>
+            <hr>
+          </div>
+        </div>
+
 
           <div class="row">
             <?php 
@@ -89,6 +96,12 @@
           </div>
 
           
+          <div class="row">
+            <div class="col-md-12 mb-3">
+              <h2>Empresas</h2>
+              <hr>
+            </div>
+          </div>
 
           <div class="row">
             <div class="col-md-3 mb-4">
@@ -171,6 +184,12 @@
           </div>
 
           <!-- Vagas de Emprego -->
+          <div class="row">
+            <div class="col-md-12 mb-3">
+              <h2>Vagas de Emprego</h2>
+              <hr>
+            </div>
+          </div>
           <section class="row">
 
             <div class="col-md-3 mb-2">
