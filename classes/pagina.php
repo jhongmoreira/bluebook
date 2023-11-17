@@ -18,35 +18,15 @@ class Pagina
 
     switch ($this->pagina) {
       case 0:
-        include "./lista.php";
+        include "./inicio.php";
         break;
 
       case 1:
-        include "./curso.php";
+        include "./noticia.php";
         break;
 
-      case 3:
-        include "./modulo.php";
-        break;
-
-      case 4:
-        include "./avaliacao_lista.php";
-        break;
-
-      case 5:
-        include "./avaliacao.php";
-        break;
-
-      case 6:
-        include "./finaliza-modulo.php";
-        break;
-
-      case 7:
-        include "./reabre-modulo.php";
-        break;
-
-      case 8:
-        include "./slide.php";
+      case 2:
+        include "./todas_noticias.php";
         break;
   }
 }
