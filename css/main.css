@@ -1,12 +1,12 @@
 .banner-1{
-    background-image: url("../img/conteudo/background-slide-1.png");
+    background-image: url("../img/conteudo/background-slide-1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 400px;
 }
 
 .banner-2{
-    background-image: url("../img/conteudo/background-slide-2.png");
+    background-image: url("../img/conteudo/background-slide-2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 400px;
