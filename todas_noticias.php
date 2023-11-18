@@ -26,7 +26,7 @@
         <div class="col p-4 d-flex flex-column">
           <strong class="d-inline-block mb-2 text-primary-emphasis"><?php echo $dados['categoria'];?></strong>
           <h3 class="mb-0"><?php echo $dados['titulo'];?></h3>
-          <div class="mb-1 text-body-secondary"><?php echo $dados['data_noticia'];?></div>
+          <div class="mb-1 text-body-secondary"><?php echo dataFormato($dados['data_noticia']);?></div>
           <p class="card-text mb-auto"><?php echo $dados['subtitulo'];?></p>
           <a href="index.php?pg=1&noticia=<?php echo $dados['identificador'];?>" class="icon-link gap-1 icon-link-hover stretched-link">
             Ler

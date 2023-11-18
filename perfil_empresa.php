@@ -105,40 +105,40 @@
                   <div class="card h-100">
                     <div class="card-body">
                       <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">vagas</i></h6>
-                      <a href="" class="link-underline link-underline-opacity-0"><small><i class="fa fa-eye"></i> Web Designer</small></a>
+                      <?php
+                        $bancoVagaEmpresa = new BancoDeDados;
+                        $bancoVagaEmpresa->query("SELECT * FROM vagas, empresas WHERE id_empresa = $cod AND cod_empresa = id_empresa ORDER BY id_vaga ASC");
+                        $totalVagasEmpresa = $bancoVagaEmpresa->linhas();
+
+                        if ($totalVagasEmpresa != 0)
+                        {
+                            foreach ($bancoVagaEmpresa->result() as $dadosVaga)
+                            {   
+                      ?>
+
+                      <?php 
+                        $status = ($dadosVaga['aberto'] == 1) ? "Disponível" : "Encerrado";
+                        
+                        $background_status = ($dadosVaga['aberto'] == 1) ? "text-bg-success" : "text-bg-danger";
+
+                      ?>
+
+                      <span class="badge <?php echo $background_status; ?>">
+                        <?php echo $status; ?>
+                      </span>
+                      
+                      <div class="row p-2">
+                        <a href="index.php?pg=7&vaga=<?php echo $dadosVaga['id_vaga'];?>" class="link-underline link-underline-opacity-0"><small><i class="fa-solid fa-briefcase"></i> <?php echo $dadosVaga['nome_vaga'];?></small></a>
+                        <hr>
+                      </div>
+                      <?php
+                            }
+                        }
+                      ?>
                     </div>
                   </div>
                 </div>
-                <!-- <div class="col-sm-6 mb-3">
-                  <div class="card h-100">
-                    <div class="card-body">
-                      <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">assignment</i>Project Status</h6>
-                      <small>Web Design</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>Website Markup</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>One Page</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>Mobile Template</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>Backend API</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
               </div>
-
-
 
             </div>
           </div>

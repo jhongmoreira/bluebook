@@ -114,10 +114,11 @@
                             <?php echo $status; ?>
                         </span>
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item"><small><i class="fa-solid fa-calendar"></i> <?php echo $dados['data_cad_vaga'];?></small></li>
+                      <li class="list-group-item"><small><i class="fa-solid fa-hashtag"></i> <?php echo $dados['id_vaga'];?></small></li>
+                      <li class="list-group-item"><small><i class="fa-solid fa-calendar"></i> <?php echo dataFormato($dados['data_cad_vaga']);?></small></li>
                       <li class="list-group-item"><small><i class="fa-solid fa-briefcase"></i> <?php echo $dados['nome_vaga'];?></small></li>
                       <li class="list-group-item"><small><i class="fa fa-solid fa-graduation-cap"></i> <?php echo $dados['tipo_escolaridade'];?></small></li>
-                      <li class="list-group-item"><small><i class="fa fa-solid fa-money-bill"></i> <?php echo $dados['salario'];?></small></li>
+                      <li class="list-group-item"><small><i class="fa fa-solid fa-money-bill"></i> <?php echo moedaBR($dados['salario']);?></small></li>
                     </ul>
                     <div>
                         <h6 class="d-flex align-items-center mt-2"><i class="material-icons text-info mr-2">Como se candidatar?</i></h4>

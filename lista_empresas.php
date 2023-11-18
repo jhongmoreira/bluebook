@@ -61,15 +61,30 @@
     <div class="col-md-3 mb-4">
         <div class="card p-1">
             <img src="img/conteudo/<?php echo $dados['logotipo_empresa'];?>" class="card-img-top" alt="Logotipo da Exata Serviços">
-            <!-- <div class="card-body"> -->
-              <!-- <h5 class="card-title">Empresa Teste 01</h5> -->
-              <!-- <p class="card-text">Empresa de Marketing/Publicidade.</p> -->
-              <!-- <small>Marketing/Publicidade</small> -->
-            <!-- </div> -->
             <span class="categoria badge text-bg-primary"><?php echo $dados['nome_categoria'];?></span>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item"><small><i class="fa-brands fa-whatsapp"></i> <?php echo $dados['telefone_empresa'];?></small></li>
-              <li class="list-group-item"><small><i class="fa fa-phone"></i> <?php echo $dados['whatsapp_empresa'];?></small></li>
+              <li class="list-group-item">
+                <small><i class="fa-brands fa-whatsapp"></i>
+                  <?php 
+                  if ($dados['whatsapp_empresa'] == ''){
+                    echo "Não informado";
+                  }else{
+                    echo formatar('(%s%s) %s%s%s%s-%s%s%s%s', $dados['whatsapp_empresa']);
+                  }
+                  ?>
+                </small>
+              </li>
+              <li class="list-group-item">
+                <small><i class="fa fa-phone"></i> 
+                  <?php 
+                  if ($dados['telefone_empresa'] == ''){
+                    echo "Não informado";
+                  }else{
+                    echo formatar('(%s%s) %s%s%s%s-%s%s%s%s', $dados['telefone_empresa']);
+                  }
+                  ?>
+                </small>
+              </li>
               <li class="list-group-item"><small><i class="fa fa-envelope"></i> <?php echo $dados['email_empresa'];?></small></li>
             </ul>
             <div class="card-body">
