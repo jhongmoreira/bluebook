@@ -32,6 +32,14 @@ class Pagina
       case 3:
         include "./webtv.php";
         break;
+        
+      case 4:
+        include "./perfil_empresa.php";
+        break;
+
+      case 5:
+        include "./lista_empresas.php";
+        break;
   }
 }
 }

@@ -128,7 +128,7 @@
                       <li class="list-group-item"><small><i class="fa fa-envelope"></i> <?php echo $dados['email_empresa'];?></small></li>
                     </ul>
                     <div class="card-body">
-                    <a href="index.php?pg=1&noticia=#" class="icon-link gap-1 icon-link-hover stretched-link text-center">
+                    <a href="index.php?pg=4&cod=<?php echo $dados['id_empresa'];?>" class="icon-link gap-1 icon-link-hover stretched-link text-center">
                       Ver
                     </a>                    
                   </div>
@@ -140,7 +140,7 @@
                   ?>
 
             <div class="col-md-12 mt-5 mb-5 d-flex justify-content-center">
-              <a href="#">
+              <a href="index.php?pg=5">
                 Ver Empresas
               </a>
             </div>
