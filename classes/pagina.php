@@ -40,6 +40,14 @@ class Pagina
       case 5:
         include "./lista_empresas.php";
         break;
+
+      case 6:
+        include "./todas_vagas.php";
+        break;
+
+      case 7:
+        include "./vaga_emprego.php";
+        break;
   }
 }
 }
