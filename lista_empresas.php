@@ -10,7 +10,7 @@
 <div class="container-fluid mt-2">
 <div class="row">
   <div class="col-md-12">
-    <h1>Todas as notícias</h1>
+    <h1>Empresas</h1>
     <hr>
   </div>
 </div>
