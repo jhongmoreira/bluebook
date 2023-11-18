@@ -105,7 +105,7 @@
 
           <div class="row">
           <?php 
-              $banco->query("SELECT * FROM empresas LIMIT 4");
+              $banco->query("SELECT * FROM  categorias, empresas WHERE categoria_empresa = id_categoria LIMIT 4");
               $total = $banco->linhas();
 
               if ($total != 0)
@@ -121,7 +121,7 @@
                       <!-- <p class="card-text">Empresa de Marketing/Publicidade.</p> -->
                       <!-- <small>Marketing/Publicidade</small> -->
                     <!-- </div> -->
-                    <span class="categoria badge text-bg-primary"><?php echo $dados['categoria_empresa'];?></span>
+                    <span class="categoria badge text-bg-primary"><?php echo $dados['nome_categoria'];?></span>
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item"><small><i class="fa-brands fa-whatsapp"></i> <?php echo $dados['telefone_empresa'];?></small></li>
                       <li class="list-group-item"><small><i class="fa fa-phone"></i> <?php echo $dados['whatsapp_empresa'];?></small></li>

@@ -2,7 +2,7 @@
   include("classes/database.php");
   $banco = new BancoDeDados;
   $cod = $_GET['cod'];
-  $banco->query("SELECT * FROM empresas WHERE id_empresa = '$cod'");
+  $banco->query("SELECT * FROM categorias, empresas WHERE categoria_empresa = id_categoria AND id_empresa = '$cod'");
   $total = $banco->linhas();
   if ($total == 0){
     echo "<h1 class='p-5 text-center'>Erro 404<br>Nada encontrado</h1>";
@@ -34,7 +34,7 @@
                     <img src="img/conteudo/<?php echo $dados['logotipo_empresa'];?>" alt="Logo da Empresa" width="150">
                     <div class="mt-3">
                       <h4><?php echo $dados['nome_empresa'];?></h4>
-                      <p class="text-secondary mb-1"><?php echo $dados['categoria_empresa'];?></p>
+                      <p class="text-secondary mb-1"><?php echo $dados['nome_categoria'];?></p>
                       <p class="text-muted font-size-sm"><?php echo $dados['cidade_empresa'];?></p>
                       <button class="btn btn-primary">Enviar Mensagem</button>
                       <!-- <button class="btn btn-outline-primary">Message</button> -->
