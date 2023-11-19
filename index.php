@@ -1,10 +1,10 @@
+<!DOCTYPE html>
 <?php
   // error_reporting(E_ERROR | E_PARSE);
   include("classes/database.php");
   include("funcoes/funcoes.php");
   $banco = new BancoDeDados;
 ?>
-<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
