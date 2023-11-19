@@ -17,10 +17,11 @@
       $banco->query("SELECT * FROM noticias WHERE identificador = '$noticia'");
       $total = $banco->linhas();
       foreach ($banco->result() as $dados){}
+      $url_imagem = "https://www.jgmoreira.art/sg/img/conteudo/". $dados['imagem_capa'];
     ?>
         <meta property="og:title" content="<?php echo $dados['titulo'];?>">
         <meta property="og:description" content="<?php echo $dados['subtitulo'];?>">
-        <meta property="og:image" content="http://www.jgmoreira.art/sg/img/conteudo/<?php echo $dados['imagem_capa'];?>">
+        <meta property="og:image" content="<?php echo $url_imagem;?>">
         <title><?php echo $dados['titulo'];?> - SG+ - Informação e Entretenimento em São Gotardo e Região</title>
         <?php
       }else{
