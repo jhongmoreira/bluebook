@@ -1,5 +1,5 @@
 <?php
-  error_reporting(E_ERROR | E_PARSE);
+  // error_reporting(E_ERROR | E_PARSE);
   include("classes/database.php");
   include("funcoes/funcoes.php");
   $banco = new BancoDeDados;
@@ -9,7 +9,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SG+ - Informação e Entretenimento em São Gotardo e Região</title>
+    <?php
+      @$pg = @$_GET['pg'];
+      if ($pg == 1)
+      {
+      @$noticia = @$_GET['noticia'];
+      $banco->query("SELECT * FROM noticias WHERE identificador = '$noticia'");
+      $total = $banco->linhas();
+      $linkAtual = $_SERVER['SERVER_NAME'];
+      foreach ($banco->result() as $dados){}
+    ?>
+        <meta property="og:title" content="<?php echo $dados['titulo'];?>">
+        <meta property="og:description" content="<?php echo $dados['subtitulo'];?>">
+        <meta property="og:image" content="<?php echo $linkAtual.'/img/conteudo/'.$dados['imagem_capa'];?>">
+        <!-- <meta property="og:url" content="URL_da_Página"> -->
+        <title><?php echo $dados['titulo'];?> - SG+ - Informação e Entretenimento em São Gotardo e Região</title>
+        <?php
+      }else{
+        echo "<title>SG+ - Informação e Entretenimento em São Gotardo e Região</title>";       
+      }
+    ?>
     <link rel="stylesheet" href="css/main.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="cdn/bootstrap/css/bootstrap.min.css">
@@ -40,17 +59,6 @@
         <li class="nav-item">
           <a class="nav-link" href="index.php?pg=3">WebTV</a>
         </li>
-        <!-- <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li> -->
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2 bg-dark text-white" type="search" placeholder="Search" aria-label="Search">
@@ -59,28 +67,6 @@
     </div>
   </div>
 </nav>
-        <!-- <div class="container">
-          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a href="index.php" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none me-3">
-              <img src="img/site/logo.svg" alt="Logotipo" width="40" height="32">
-            </a>
-    
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-              <li><a href="#" class="nav-link px-2 text-white">Feed</a></li>
-              <li><a href="#" class="nav-link px-2 text-white">Currículos</a></li>
-              <li><a href="index.php?pg=3" class="nav-link px-2 text-white">WebTV</a></li>
-            </ul>
-    
-            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-              <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
-            </form>
-    
-            <div class="text-end">
-              <button type="button" class="btn btn-warning">Pesquisar</button>
-            </div>
-          </div>
-        </div> -->
       </header>
 
       <?php

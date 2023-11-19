@@ -62,13 +62,23 @@
                   foreach ($banco->result() as $dados)
                   {   
               ?> 
-              <div class="col-md-3"> 
-                <img width="100%" class="img-fluid" src="img/conteudo/<?php echo $dados['imagem_capa'];?>" alt="">                
-                <h4><a href="latest_news.html">Secretart for Economic Air plane that looks like</a></h4>
-                <span>by Alice cloe - Jun 19, 2020</span>
-                <p>Struggling to sell one multi-million dollar home currently on the market won’t stop actress and singer Jennifer Lopez.</p>
-                <span class="categoria badge text-bg-primary"><?php echo $dados['categoria'];?></span>
-              </div>             
+
+              <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                  <div class="col p-4 d-flex flex-column">
+                    <strong class="d-inline-block mb-2 text-primary-emphasis"><?php echo $dados['categoria'];?></strong>
+                    <h3 class="mb-0"><?php echo $dados['titulo'];?></h3>
+                    <div class="mb-1 text-body-secondary"><?php echo dataFormato($dados['data_noticia']);?></div>
+                    <p class="card-text mb-auto"><?php echo $dados['subtitulo'];?></p>
+                    <a href="index.php?pg=1&noticia=<?php echo $dados['identificador'];?>" class="icon-link gap-1 icon-link-hover stretched-link">
+                      Ler
+                    </a>
+                  </div>
+                  <div class="col-auto d-lg-block">
+                    <img src="img/conteudo/<?php echo $dados['imagem_capa'];?>" height="250" alt="" srcset="">
+                  </div>
+                </div>
+              </div>
 
               <?php
 

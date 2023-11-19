@@ -62,23 +62,23 @@
                   foreach ($banco->result() as $dados)
                   {   
               ?> 
-
-              <div class="col-md-6">
-                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                  <div class="col p-4 d-flex flex-column">
-                    <strong class="d-inline-block mb-2 text-primary-emphasis"><?php echo $dados['categoria'];?></strong>
-                    <h3 class="mb-0"><?php echo $dados['titulo'];?></h3>
-                    <div class="mb-1 text-body-secondary"><?php echo dataFormato($dados['data_noticia']);?></div>
-                    <p class="card-text mb-auto"><?php echo $dados['subtitulo'];?></p>
-                    <a href="index.php?pg=1&noticia=<?php echo $dados['identificador'];?>" class="icon-link gap-1 icon-link-hover stretched-link">
-                      Ler
-                    </a>
+              
+                <div class="col-md-6">
+                  <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column">
+                      <strong class="d-inline-block mb-2 text-primary-emphasis"><?php echo $dados['categoria'];?></strong>
+                      <h3 class="mb-0"><?php echo $dados['titulo'];?></h3>
+                      <div class="mb-1 text-body-secondary"><?php echo dataFormato($dados['data_noticia']);?></div>
+                      <p class="card-text mb-auto"><?php echo $dados['subtitulo'];?></p>
+                      <a href="index.php?pg=1&noticia=<?php echo $dados['identificador'];?>" class="icon-link gap-1 icon-link-hover stretched-link">
+                        Ler
+                      </a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                      <img src="img/conteudo/<?php echo $dados['imagem_capa'];?>" height="250" alt="" srcset="">
+                    </div>
                   </div>
-                  <div class="col-auto d-lg-block">
-                    <img src="img/conteudo/<?php echo $dados['imagem_capa'];?>" height="250" alt="" srcset="">
-                  </div>
-                </div>
-              </div>
+                </div>           
 
               <?php
 
@@ -89,7 +89,7 @@
 
               
               <div class="col-md-12 mt-4 mb-5 d-flex justify-content-center">
-                <a href="index.php?pg=2" class="icon-link">
+                <a href="index.php?pg=2" class="btn btn-sm btn-primary">
                   Ver todas as Notícias
                 </a>
               </div>
@@ -155,7 +155,7 @@
                   ?>
 
             <div class="col-md-12 mt-3 mb-5 d-flex justify-content-center">
-              <a href="index.php?pg=5">
+              <a href="index.php?pg=5" class="btn btn-sm btn-primary">
                 Ver Empresas
               </a>
             </div>
@@ -207,7 +207,7 @@
                 ?>
 
             <div class="col-md-12 mt-5 mb-5 d-flex justify-content-center">
-              <a href="index.php?pg=6">
+              <a href="index.php?pg=6" class="btn btn-sm btn-primary">
                 Ver todas as Vagas
               </a>
             </div>
