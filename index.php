@@ -20,7 +20,7 @@
     ?>
         <meta property="og:title" content="<?php echo $dados['titulo'];?>">
         <meta property="og:description" content="<?php echo $dados['subtitulo'];?>">
-        <meta property="og:image" content="https://www.jgmoreira.art/sg/img/conteudo/<?php echo $dados['imagem_capa'];?>">
+        <meta property="og:image" content="http://www.jgmoreira.art/sg/img/conteudo/<?php echo $dados['imagem_capa'];?>">
         <title><?php echo $dados['titulo'];?> - SG+ - Informação e Entretenimento em São Gotardo e Região</title>
         <?php
       }else{
