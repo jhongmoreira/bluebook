@@ -75,7 +75,7 @@
                       </a>
                     </div>
                     <div class="col-auto d-none d-lg-block">
-                      <img src="img/conteudo/<?php echo $dados['imagem_capa'];?>" height="250" alt="" srcset="">
+                      <img src="img/conteudo/<?php echo $dados['imagem_capa'];?>" class="thumb-noticia" alt="" srcset="">
                     </div>
                   </div>
                 </div>           

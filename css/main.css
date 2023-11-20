@@ -22,3 +22,9 @@
 .card i{
     color: darkblue !important;
 }
+
+.thumb-noticia{
+    max-width: 250px;
+    height: 300px;
+    object-fit: cover;
+}
