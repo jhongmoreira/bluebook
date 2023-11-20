@@ -25,7 +25,7 @@
     
     <div class="col-md-12"><small><?php echo @$dados['data_noticia']; ?></small></div>
 
-    <div class="col-md-12 text-center mt-3"><img class="img-thumbnail" height="250px" src="img/conteudo/<?php echo @$dados['imagem_capa']; ?>" alt="" srcset="">
+    <div class="col-md-12 text-center mt-3"><img height="250px" src="img/conteudo/<?php echo @$dados['imagem_capa']; ?>" alt="" srcset="">
   
   </div>
 
