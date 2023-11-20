@@ -6,7 +6,7 @@
 <h1>Nova Notícia</h1>
 
     <div class="container-fluid">
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="idCategoria">Categoria:</label>
                 <select name="idCategoria" id="idCategoria" class="form-control">
@@ -42,14 +42,20 @@
             </div>
 
             <div class="form-group">
+                <label for="foto">Imagem</label>
+                <input type="file" name="foto" id="foto">
+            </div>
+
+            <!-- <div class="form-group">
                 <label for="imgCapa">Imagem de Destaque</label>
                 <input type="text" class="form-control" id="imgCapa" name="imgCapa">
-            </div>
+            </div> -->
 
             <div class="form-group">
                 <label for="dataNoticia">Data</label>
                 <input type="date" class="form-control" id="dataNoticia" name="dataNoticia">
             </div>
+
 
             <div class="form-group mt-2 mb-2">
             <textarea id="div_editor1" name="div_editor1"></textarea>
@@ -65,11 +71,28 @@
 
 if ($_SERVER["REQUEST_METHOD"] == 'POST')
 {
+
+    $diretorio = "../img/conteudo/";
+
+    // Gera um nome único para o arquivo
+    $nome_arquivo = uniqid() . "_" . basename($_FILES["foto"]["name"]);
+
+    // Caminho completo do arquivo no servidor
+    $caminho_arquivo = $diretorio . $nome_arquivo;
+
+    if (move_uploaded_file($_FILES["foto"]["tmp_name"], $caminho_arquivo)) {
+        // Insere o nome do arquivo no banco de dados
+        $fotoCapa = $nome_arquivo;
+        }else{
+            echo "Erro ao fazer upload";
+        }
+
   $categoria = addslashes($_POST["idCategoria"]);
   $titulo = addslashes($_POST["tituloNoticia"]);
   $subtitulo = addslashes($_POST["resumoNoticia"]);
   $uri = addslashes($_POST["uriNoticia"]);
-  $img = addslashes($_POST["imgCapa"]);
+//   $img = addslashes($_POST["imgCapa"]);
+  $img = $fotoCapa;
   $dt_noticia = addslashes($_POST["dataNoticia"]);
   $conteudoNoticia = addslashes($_POST["div_editor1"]);
 
@@ -80,7 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST')
     if ($total != 0)
     {
         echo "<div class='alert alert-info'>Registro inserido com sucesso</div>";
-        echo "<meta http-equiv='refresh' content='1;URL=index.php?pg=1'/>";
+        // echo "<meta http-equiv='refresh' content='1;URL=index.php?pg=1'/>";
     }else
     {
         echo "<div class='alert alert-danger'>Impossível inserir dados.</div>";
