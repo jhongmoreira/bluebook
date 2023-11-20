@@ -2,7 +2,7 @@
   include("classes/database.php");
   $banco = new BancoDeDados;
 
-  $banco->query("SELECT * FROM noticias");
+  $banco->query("SELECT * FROM categorias, noticias WHERE categoria = id_categoria");
   $total = $banco->linhas();
 
 ?>
@@ -24,7 +24,7 @@
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column">
-          <strong class="d-inline-block mb-2 text-primary-emphasis"><?php echo $dados['categoria'];?></strong>
+          <strong class="d-inline-block mb-2 text-primary-emphasis"><?php echo $dados['nome_categoria'];?></strong>
           <h3 class="mb-0"><?php echo $dados['titulo'];?></h3>
           <div class="mb-1 text-body-secondary"><?php echo dataFormato($dados['data_noticia']);?></div>
           <p class="card-text mb-auto"><?php echo $dados['subtitulo'];?></p>

@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="row mt-2">
         <div class="col-md-12">
-        <a href="index.php?pg=1"><i class="fa fa-list"></i> Cursos</a>
+        <a href="index.php?pg=1"><i class="fa fa-list"></i> Nova Notícia</a>
         </div>
     </div>
 

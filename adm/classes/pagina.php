@@ -22,7 +22,7 @@ class Pagina
         break;
 
       case 1:
-        include "./lista-cursos.php";
+        include "./nova_noticia.php";
         break;
 
       case 2:
