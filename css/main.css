@@ -103,9 +103,10 @@
       width: 80px;
       object-fit: contain;
       background-color: white;
-      /* border-radius: 50%; */
+      /* border-radius: 50%; */;
   }
-  
+
+ 
   .text-green {
       color: #8dc63f;
   }

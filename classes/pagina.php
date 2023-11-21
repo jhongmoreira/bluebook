@@ -48,6 +48,10 @@ class Pagina
       case 7:
         include "./vaga_emprego.php";
         break;
+
+      case 8:
+        include "./feed.php";
+        break;
   }
 }
 }

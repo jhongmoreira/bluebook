@@ -50,7 +50,7 @@
           <a class="nav-link" href="index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Feed</a>
+          <a class="nav-link" href="index.php?pg=8">Feed</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Currículos</a>
