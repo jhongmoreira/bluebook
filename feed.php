@@ -87,60 +87,30 @@
 }
 </style>
 
-<div class="row ">
-    <div class="col-md-6 mx-auto">
-          <ul class="list-group list-group-dividered list-group-full">
-            <li class="list-group-item">
-              <div class="media">
-                <div class="m-1 media-left float-start">
-                  <a class="avatar" href="javascript:void(0)">
-                    <img src="img/conteudo/logo_exata.png" class="profile-photo-lg" alt="">
-                    <i></i>
-                  </a>
-                </div>
-                <div class="media-body">
-                  <small class="text-muted float-end">21/11/2023 - 15:28</small>
-                  <h4 class="media-heading">Exata São Gotardo</h4><br>
-                  <div>Estamos com oportunidade de emprego. Acesse nosso perfil e saiba.</div>
-                </div>
-              </div>
-            </li>
-            <hr>
-            <li class="list-group-item">
-              <div class="media">
-                <div class="media-left">
-                  <a class="avatar avatar-busy" href="javascript:void(0)">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="...">
-                    <i></i>
-                  </a>
-                </div>
-                <div class="media-body">
-                  <small class="text-muted pull-right">38 minutes ago</small>
-                  <h4 class="media-heading">@Scott Sanders</h4>
-                  <div>Lorem ipsum Laborum sit laborum cillum proident dolore culpa
-                    reprehenderit qui enim labore do mollit in.</div>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item">
-              <div class="media">
-                <div class="media-left">
-                  <a class="avatar avatar-online" href="javascript:void(0)">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="...">
-                    <i></i>
-                  </a>
-                </div>
-                <div class="media-body">
-                  <small class="text-muted pull-right">2 hours ago</small>
-                  <h4 class="media-heading">@Nina Wells</h4>
-                  <div>Lorem ipsum Culpa mollit ex mollit magna dolore dolore dolore
-                    tempor velit magna enim ad dolore dolore dolore.</div>
-                </div>
-              </div>
-            </li>
-          </ul>
-          <span class="text-info">163K users active</span>
-        </div>
-      </div>
-    </div>
+<div class="row mx-auto col-md-8">
+  <div class="col-1"><img class="mt-4 justify-content-center"src="img/conteudo/logo_exata.png" width="80px"></div>
+  <div class="col-md-7 media-body row">
+    <small class="text-muted">21/11/2023 - 15:28</small>
+    <h4 class="media-heading">Exata São Gotardo</h4><br>
+    <div>Estamos com oportunidade de emprego. Acesse nosso perfil e saiba.</div>
+  </div>
+  <hr>
+</div>
+<div class="row mx-auto col-md-8">
+  <div class="col-1"><img class="mt-4 justify-content-center"src="img/conteudo/logo_exata.png" width="80px"></div>
+  <div class="col-md-7 media-body row">
+    <small class="text-muted">21/11/2023 - 15:28</small>
+    <h4 class="media-heading">Exata São Gotardo</h4><br>
+    <div>Estamos com oportunidade de emprego. Acesse nosso perfil e saiba.</div>
+  </div>
+  <hr>
+</div>
+<div class="row mx-auto col-md-8">
+  <div class="col-1"><img class="mt-4 justify-content-center"src="img/conteudo/logo_exata.png" width="80px"></div>
+  <div class="col-md-7 media-body row">
+    <small class="text-muted">21/11/2023 - 15:28</small>
+    <h4 class="media-heading">Exata São Gotardo</h4><br>
+    <div>Estamos com oportunidade de emprego. Acesse nosso perfil e saiba.</div>
+  </div>
+  <hr>
 </div>
