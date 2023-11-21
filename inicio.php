@@ -47,16 +47,33 @@
 
       <section class="container-fluid mt-4">
 
-      <div class="row justify-content-center mb-5 mt-5">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h3 class="p-0 m-0">Pesquise por uma empresa</h3>
+        </div>
+      </div>
+
+      <div class="row justify-content-center mb-5 mt-3">
         <div class="col-md-8">
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Digite a empresa ou categoria" aria-label="Search">
-            <button class="btn btn-warning" type="submit">Pesquisar</button>
+            <button class="btn btn-sm btn-primary" type="submit">Pesquisar</button>
           </form>
         </div>
       </div>
 
           <div class="container">
+
+          <div class="row mb-2">
+            <div class="col-md-12 titulos-home-border-left">
+              <h3 class="border-titulo">
+                <span class="titulos-home">
+                  Empresas
+                </span>
+              </h3>
+            </div>
+          </div>
+
             <div class="friend-list">
               <div class="row">
                 <?php 
@@ -97,11 +114,75 @@
                 </a>
               </div>
             </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="p-5 mb-5 bg-dark text-white rounded">
+                  <h1>Tenha sua presença aqui</h1>
+                  <p>Cadastre sua empresa, vagas de emprego e acesse currículos de São Gotardo e região.</p>
+                  <button class="btn btn-secondary">Cadastrar-se</button>
+                </div>
+              </div>
+            </div>
             
 
+            <div class="row mb-2">
+            <div class="col-md-12 titulos-home-border-left">
+              <h3 class="border-titulo">
+                <span class="titulos-home">
+                  Vagas de Emprego
+                </span>
+              </h3>
+            </div>
+          </div>
+
+            <div class="row">
+            <?php 
+              $banco->query("SELECT * FROM  escolaridade, vagas, empresas WHERE cod_empresa = id_empresa AND cod_escolaridade = id_escolaridade ORDER BY id_vaga ASC LIMIT 6 ");
+              $total = $banco->linhas();
+
+              if ($total != 0)
+              {
+                  foreach ($banco->result() as $dados)
+                  {   
+              ?> 
+              <div class="col-md-3 mb-4">
+                <div class="card" style="height: 7.5em;">
+                  <div class="card-body">
+                    <h5 class="card-title"><?php echo $dados['nome_vaga'];?></h5>
+                    <h6 class="card-subtitle mb-2 text-muted"><?php echo $dados['nome_empresa'];?></h6>
+                      <p class="card-text">
+                      <?php 
+                            $status = ($dados['aberto'] == 1) ? "Disponível" : "Encerrado";                            
+                            $background_status = ($dados['aberto'] == 1) ? "text-bg-success" : "text-bg-danger";
+                        ?>
+                        <span class="categoria badge <?php echo $background_status; ?>">
+                            <?php echo $status; ?>
+                        </span>
+                      </p>
+                    <a href="index.php?pg=7&vaga=<?php echo $dados['id_vaga'];?>" class="card-link">Ver Vaga</a>
+                  </div>
+                </div>
+              </div>
+
+
+            <?php
+                  }
+                }
+            ?>
+          </div>
+
+          <div class="row">
+              <div class="col-md-12 mt-3 mb-5 d-flex justify-content-left">
+                <a href="index.php?pg=5" class="btn btn-sm btn-primary">
+                  Ver Todas
+                </a>
+              </div>
+            </div>
+
+          
+
         </div>
-
-
 
         
       </section>

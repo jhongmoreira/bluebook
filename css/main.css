@@ -119,3 +119,20 @@
   .categoria-empresa{
     font-size: 0.6em;
   }
+
+  .titulos-home{
+    border-left-style: solid;
+    border-left-color: #0D6EFD;
+    border-left-width: 0.2em;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    padding: 0.1em; 
+    margin: 0;
+  }
+
+  .border-titulo{
+    border-bottom-style: solid;
+    border-bottom-width: 0.2em;
+    border-bottom-color: black;
+  }
