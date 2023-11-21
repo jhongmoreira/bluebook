@@ -52,35 +52,51 @@
 </div>
 
   <div class="row">
-  <div class="container">
-            <div class="friend-list">
-              <div class="row">
   <?php
     if ($total != 0)
     {
         foreach ($banco->result() as $dados)
         {   
   ?>
-                        <div class="col-md-4 col-sm-6">
-                      <div class="friend-card card">
-                          <img src="img/conteudo/background_profile.jpg" alt="profile-cover" class="img-responsive cover">
-                        <div class="card-info">
-                          <img src="img/conteudo/<?php echo $dados['logotipo_empresa'];?>" alt="user" class="profile-photo-lg">
-                          <div class="friend-info">
-                            <p class="float-end text-green">São Gotardo</p>
-                            <h5><a href="index.php?pg=4&cod=<?php echo $dados['id_empresa'];?>" class="profile-link"><?php echo $dados['nome_empresa'];?></a></h5>
-                            <p class="categoria-empresa"><?php echo $dados['nome_categoria'];?></p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>      
-
-                  <?php
-                      }
-                    }
+    <div class="col-md-3 mb-4">
+        <div class="card p-1">
+            <img src="img/conteudo/<?php echo $dados['logotipo_empresa'];?>" class="card-img-top" alt="Logotipo da Exata Serviços">
+            <span class="categoria badge text-bg-primary"><?php echo $dados['nome_categoria'];?></span>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <small><i class="fa-brands fa-whatsapp"></i>
+                  <?php 
+                  if ($dados['whatsapp_empresa'] == ''){
+                    echo "Não informado";
+                  }else{
+                    echo formatar('(%s%s) %s%s%s%s-%s%s%s%s', $dados['whatsapp_empresa']);
+                  }
                   ?>
-              </div>
-            </div>
+                </small>
+              </li>
+              <li class="list-group-item">
+                <small><i class="fa fa-phone"></i> 
+                  <?php 
+                  if ($dados['telefone_empresa'] == ''){
+                    echo "Não informado";
+                  }else{
+                    echo formatar('(%s%s) %s%s%s%s-%s%s%s%s', $dados['telefone_empresa']);
+                  }
+                  ?>
+                </small>
+              </li>
+              <li class="list-group-item"><small><i class="fa fa-envelope"></i> <?php echo $dados['email_empresa'];?></small></li>
+            </ul>
+            <div class="card-body">
+            <a href="index.php?pg=4&cod=<?php echo $dados['id_empresa'];?>" class="icon-link gap-1 icon-link-hover stretched-link text-center">
+              Ver
+            </a>                    
+          </div>
+          </div>
     </div>
+<?php
+      }
+    }
+?>
 </div>
 </div>
