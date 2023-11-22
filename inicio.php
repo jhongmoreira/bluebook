@@ -77,7 +77,7 @@
             <div class="friend-list">
               <div class="row">
                 <?php 
-                  $banco->query("SELECT * FROM  categorias, empresas WHERE categoria_empresa = id_categoria LIMIT 4");
+                  $banco->query("SELECT * FROM  categorias, empresas WHERE categoria_empresa = id_categoria LIMIT 6");
                   $total = $banco->linhas();
 
                   if ($total != 0)
