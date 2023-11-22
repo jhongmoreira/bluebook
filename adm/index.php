@@ -44,6 +44,7 @@
 <!-- JavaScript CSS -->
 <script src="https://unpkg.com/@popperjs/core@2"></script>
 <script src="cdn/bootstrap/js/bootstrap.min.js"></script>
+<script src="../cdn/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>
