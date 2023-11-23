@@ -26,11 +26,11 @@ class Pagina
         break;
 
       case 2:
-        include "./modulos.php";
+        include "./empresas.php";
         break;
 
       case 3:
-        include "./editar.php";
+        include "./editar_empresa.php";
         break;
         
       case 4:

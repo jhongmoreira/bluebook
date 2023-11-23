@@ -31,15 +31,33 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <div class="dropdown m-1">
+                    <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Cadastrar
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="index.php?pg=1">Empresa</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown m-1">
+                    <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Listar
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="index.php?pg=2">Empresas</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
+        <div class="container">
         <!-- Inicio -->
             <?php
                 include_once("classes/pagina.php");
                 $pagina = new Pagina;
             ?>
+        </div>
     </div>
 <!-- JavaScript CSS -->
 <script src="https://unpkg.com/@popperjs/core@2"></script>

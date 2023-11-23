@@ -3,9 +3,13 @@
   $banco = new BancoDeDados;
 ?>   
 
-<h1>Nova Empresa</h1>
+<div class="row">
+    <div class="col-md-12">
+        <h1>Cadastrar Nova Empresa</h1>
+        <hr>
+    </div>
+</div>
 
-    <div class="container-fluid">
         <form method="post" enctype="multipart/form-data">
 
             <div class="form-group">
@@ -138,4 +142,3 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST')
     }
 }
 ?>
-    </div>
