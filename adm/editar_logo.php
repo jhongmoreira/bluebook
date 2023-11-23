@@ -27,7 +27,7 @@
 
         <div class="row mt-3">
             <div class="col-md-5">
-                <input class="form-control" type="file" name="foto" id="foto">
+                <input class="form-control" type="file" name="foto" id="foto" required="true">
             </div>
         </div>
 
