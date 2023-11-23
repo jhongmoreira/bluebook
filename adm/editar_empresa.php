@@ -104,25 +104,26 @@
         </form>
 
 <?php
-if ($_SERVER["REQUEST_METHOD"] == 'POST')
-{
+if ($_SERVER["REQUEST_METHOD"] == 'POST'){
+
+    if ($_FILES["foto"]["error"]==4){
+        $erro = 1;
+    }else{
+        $erro = 0;
         $diretorio = "../img/conteudo/";
-    
-        // Gera um nome único para o arquivo
         $nome_arquivo = uniqid() . "_" . basename($_FILES["foto"]["name"]);
-    
-        // Caminho completo do arquivo no servidor
         $caminho_arquivo = $diretorio . $nome_arquivo;
-    
+
         if (move_uploaded_file($_FILES["foto"]["tmp_name"], $caminho_arquivo)){
-            // Insere o nome do arquivo no banco de dados
             $fotoCapa = $nome_arquivo;
             }else{
                 echo "Erro ao fazer upload";
             }
+    }  
+
 
   $nome = addslashes($_POST["nomeEmpresa"]);
-  $logotipo = $fotoCapa;
+  $logotipo = @$fotoCapa;
   $categoria = addslashes($_POST["idCategoria"]);  
   $telefone = addslashes($_POST["telefoneEmpresa"]);
   $whatsapp = addslashes($_POST["whatsappEmpresa"]);
@@ -135,11 +136,23 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST')
   $bairro = addslashes($_POST["bairroEmpresa"]);
   $cidade = addslashes($_POST["cidadeEmpresa"]);
 
-  if ($_FILES["foto"]["error"] == 4){
-    $banco->query("UPDATE empresas SET nome_empresa = '$nome', categoria_empresa = $categoria, telefone_empresa = '$telefone', whatsapp_empresa = '$whatsapp', site_empresa = '$site', instagram_empresa = '$instagram', facebook_empresa = '$facebook', email_empresa = '$email', rua_empresa = '$rua', numero_empresa = $numero, bairro_empresa = '$bairro', cidade_empresa = '$cidade' WHERE id_empresa = $idEmpresa");
-}else{
-      $banco->query("UPDATE empresas SET nome_empresa = '$nome', logotipo_empresa = '$logotipo', categoria_empresa = $categoria, telefone_empresa = '$telefone', whatsapp_empresa = '$whatsapp', site_empresa = '$site', instagram_empresa = '$instagram', facebook_empresa = '$facebook', email_empresa = '$email', rua_empresa = '$rua', numero_empresa = $numero, bairro_empresa = '$bairro', cidade_empresa = '$cidade' WHERE id_empresa = $idEmpresa");
-  }
+    if ($erro==1)
+    {
+        $banco->query("UPDATE empresas SET nome_empresa = '$nome', categoria_empresa = $categoria, telefone_empresa = '$telefone', whatsapp_empresa = '$whatsapp', site_empresa = '$site', instagram_empresa = '$instagram', facebook_empresa = '$facebook', email_empresa = '$email', rua_empresa = '$rua', numero_empresa = $numero, bairro_empresa = '$bairro', cidade_empresa = '$cidade' WHERE id_empresa = $idEmpresa");
+    }
+    
+    if ($erro==0){
+        // $banco->query("UPDATE empresas SET nome_empresa = '$nome', logotipo_empresa = '$logotipo', categoria_empresa = $categoria, telefone_empresa = '$telefone', whatsapp_empresa = '$whatsapp', site_empresa = '$site', instagram_empresa = '$instagram', facebook_empresa = '$facebook', email_empresa = '$email', rua_empresa = '$rua', numero_empresa = $numero, bairro_empresa = '$bairro', cidade_empresa = '$cidade' WHERE id_empresa = $idEmpresa");
+        echo "tá foda";
+        echo "tá foda";
+        echo "tá foda";
+        echo "tá foda";
+        echo "tá foda";
+        echo "tá foda";
+        echo "tá foda";
+    }
+    
+ 
 
 
     $total = $banco->linhas();
