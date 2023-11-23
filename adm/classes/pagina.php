@@ -38,39 +38,11 @@ class Pagina
         break;
 
       case 5:
-        include "./novo-modulo.php";
+        include "./editar_logo.php";
         break;
 
       case 6:
-        include "./nova-atividade.php";
-        break;
-
-      case 6:
-        include "./nova-atividade.php";
-        break;
-
-      case 60:
-        include "./nova-atividade-arquivo.php";
-        break;
-
-      case 7:
-        include "./listar-atividades-modulo.php";
-        break;
-
-      case 8:
-        include "./editar-atividade.php";
-        break;
-
-      case 9:
-        include "./editar-curso.php";
-        break;
-
-      case 10:
-        include "./nova-matricula.php";
-        break;
-    
-      case 11:
-        include "./novo-aluno.php";
+        include "./arquivar_empresa.php";
         break;
   }
 }

@@ -128,7 +128,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST')
   $bairro = addslashes($_POST["bairroEmpresa"]);
   $cidade = addslashes($_POST["cidadeEmpresa"]);
 
-    $banco->query("INSERT INTO empresas VALUES(null, '$nome', '$logotipo', $categoria, '$telefone', '$whatsapp', '$site', '$instagram', '$facebook', '$email', '$rua', $numero, '$bairro', '$cidade')");
+    $banco->query("INSERT INTO empresas VALUES(null, '$nome', '$logotipo', $categoria, '$telefone', '$whatsapp', '$site', '$instagram', '$facebook', '$email', '$rua', $numero, '$bairro', '$cidade', 1)");
 
     $total = $banco->linhas();
 

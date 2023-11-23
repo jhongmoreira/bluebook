@@ -29,10 +29,21 @@
         ?> 
     <tr>
             <th scope="row"><?php echo $dados['id_empresa']; ?></th>
-            <td><?php echo $dados['nome_empresa']; ?></td>
+            <td><a target="_blank" href="../index.php?pg=4&cod=<?php echo $dados['id_empresa']; ?>"><?php echo $dados['nome_empresa']; ?></a></td>
             <td>
-                <a class="m-1" href="index.php?pg=3&empresa=<?php echo $dados['id_empresa']; ?>"><li class="fa fa-pen"></li></a>
-                <a class="m-1" href="index.php?pg=4&empresa=<?php echo $dados['id_empresa']; ?>"><li class="fa fa-box-archive"></li></a>
+                <a class="m-1" href="index.php?pg=3&empresa=<?php echo $dados['id_empresa']; ?>"><li class="text-success fa fa-pen"></li></a>
+                <a class="m-1" href="index.php?pg=5&empresa=<?php echo $dados['id_empresa']; ?>"><i class="text-info fa-solid fa-image"></i></li></a>
+                  <?php 
+                    if ($dados['publica'] == 1){
+                  ?>             
+                    <a class="m-1" href="index.php?pg=6&publicar=nao&empresa=<?php echo $dados['id_empresa']; ?>"><li class="text-danger fa fa-box-archive"></li></a>
+                  <?php
+                    }else{
+                    ?>
+                      <a class="m-1" href="index.php?pg=6&publicar=sim&empresa=<?php echo $dados['id_empresa']; ?>"><li class="text-warning fa fa-upload"></li></a>
+                    <?php
+                    }
+                  ?>
             </td>
     </tr>
     <?php
