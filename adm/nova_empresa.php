@@ -12,34 +12,54 @@
 
         <form method="post" enctype="multipart/form-data">
 
-            <div class="form-group">
-                <label for="nomeEmpresa">Nome</label>
-                <input type="text" class="form-control" id="nomeEmpresa" name="nomeEmpresa">
+        <div class="row">
+
+            <div class="col-md-8">
+                <div class="form-group">
+                    <label for="nomeEmpresa">Nome</label>
+                    <input type="text" class="form-control" id="nomeEmpresa" name="nomeEmpresa">
+                </div>
             </div>
-
-            <div class="form-group">
-                <label for="foto" class="form-label">Logotipo</label>
-                <input class="form-control" type="file" name="foto" id="foto">
+    
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="foto" class="form-label">Logotipo</label>
+                    <input class="form-control" type="file" name="foto" id="foto">
+                </div>
             </div>
+            
+        </div>
 
-            <div class="form-group">
-                <label for="idCategoria">Categoria:</label>
-                <select name="idCategoria" id="idCategoria" class="form-control">
-                    <?php
-                        $banco->query("SELECT * FROM categorias");
-                        $total = $banco->linhas();
+            
 
-                        if ($total != 0){
-                            foreach ($banco->result() as $dados)
-                            {     
-                    ?> 
-                    <option value="<?php echo $dados['id_categoria'];?>"><?php echo $dados['nome_categoria'];?></option>
-                    <?php
+        <div class="row">
+
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label for="idCategoria">Categoria:</label>
+                    <select name="idCategoria" id="idCategoria" class="form-control">
+                        <?php
+                            $banco->query("SELECT * FROM categorias");
+                            $total = $banco->linhas();
+        
+                            if ($total != 0){
+                                foreach ($banco->result() as $dados)
+                                {     
+                        ?> 
+                        <option value="<?php echo $dados['id_categoria'];?>"><?php echo $dados['nome_categoria'];?></option>
+                        <?php
+                                }
                             }
-                        }
-                    ?>
-                </select>
-            </div>
+                        ?>
+                    </select>
+                </div>
+             </div>
+
+
+        </div>
+
+
+
 
             <div class="form-group">
                 <label for="telefoneEmpresa">Telefone</label>

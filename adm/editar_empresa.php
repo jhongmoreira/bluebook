@@ -20,6 +20,7 @@
         <form method="post" enctype="multipart/form-data">
 
         <div class="row">
+
             <div class="col-md-8">
                 <div class="form-group">
                     <label for="nomeEmpresa">Nome</label>
@@ -49,6 +50,7 @@
                     </select>
                 </div>
             </div>
+            
         </div>
 
         <div class="row">
