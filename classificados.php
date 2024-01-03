@@ -2,7 +2,7 @@
   include("classes/database.php");
   $banco = new BancoDeDados;
   $cod = $_GET['classificado'];
-  $banco->query("SELECT * FROM  classificados, usuarios, tipo_classificado WHERE classificados.usuario_post = usuarios.id_usuario_portal AND classificados.tipo_classificado = tipo_classificado = id_tipo_post AND id_classificado = $cod ORDER BY id_classificado ASC LIMIT 9");
+  $banco->query("SELECT * FROM  classificados, usuarios, tipo_classificado WHERE classificados.usuario_post = usuarios.id_usuario_portal AND classificados.tipo_classificado = id_tipo_post AND id_classificado = $cod ORDER BY id_classificado ASC LIMIT 9");
   $total = $banco->linhas();
   if ($total == 0){
     echo "<h1 class='p-5 text-center'>Erro 404<br>Nada encontrado</h1>";
