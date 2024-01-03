@@ -85,7 +85,7 @@
                   {   
               ?> 
               <div class="col-md-3 mb-4">
-                <div class="card" style="height: 7.5em;">
+                <div class="card" style="">
                   <div class="card-body">
                     <h5 class="card-title"><?php echo $dados['tipo_post'];?></h5>
                     <h6 class="card-subtitle mb-2 text-muted"><?php echo $dados['texto_classificado'];?></h6>
