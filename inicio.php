@@ -76,7 +76,7 @@
 
             <div class="row">
             <?php 
-              $banco->query("SELECT * FROM  classificados, usuarios, tipo_classificado WHERE classificados.usuario_post = usuarios.id_usuario_portal AND classificados.tipo_classificado = tipo_classificado = id_tipo_post ORDER BY id_classificado ASC LIMIT 9");
+              $banco->query("SELECT * FROM  classificados, usuarios, tipo_classificado WHERE classificados.usuario_post = usuarios.id_usuario_portal AND classificados.tipo_classificado = id_tipo_post ORDER BY id_classificado ASC LIMIT 9");
               $total = $banco->linhas();
 
               if ($total != 0)
