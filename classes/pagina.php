@@ -52,6 +52,10 @@ class Pagina
       case 8:
         include "./feed.php";
         break;
+
+      case 9:
+        include "./classificados.php";
+        break;
   }
 }
 }

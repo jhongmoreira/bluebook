@@ -47,7 +47,7 @@
 
       <section class="container-fluid mt-4">
 
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-md-12 text-center">
           <h3 class="p-0 m-0">Pesquise por uma empresa</h3>
         </div>
@@ -60,9 +60,47 @@
             <button class="btn btn-sm btn-primary" type="submit">Pesquisar</button>
           </form>
         </div>
-      </div>
+      </div> -->
 
           <div class="container">
+
+          <div class="row mb-2">
+            <div class="col-md-12 titulos-home-border-left">
+              <h3 class="border-titulo">
+                <span class="titulos-home">
+                  Classificados
+                </span>
+              </h3>
+            </div>
+          </div>
+
+            <div class="row">
+            <?php 
+              $banco->query("SELECT * FROM  classificados, usuarios, tipo_classificado WHERE classificados.usuario_post = usuarios.id_usuario_portal AND classificados.tipo_classificado = tipo_classificado = id_tipo_post ORDER BY id_classificado ASC LIMIT 9");
+              $total = $banco->linhas();
+
+              if ($total != 0)
+              {
+                  foreach ($banco->result() as $dados)
+                  {   
+              ?> 
+              <div class="col-md-3 mb-4">
+                <div class="card" style="height: 7.5em;">
+                  <div class="card-body">
+                    <h5 class="card-title"><?php echo $dados['tipo_post'];?></h5>
+                    <h6 class="card-subtitle mb-2 text-muted"><?php echo $dados['texto_classificado'];?></h6>
+                    <a href="index.php?pg=9&classificado=<?php echo $dados['id_classificado'];?>" class="card-link">Ver</a>
+                  </div>
+                </div>
+              </div>
+
+
+            <?php
+                  }
+                }
+            ?>
+          </div>
+
 
           <div class="row mb-2">
             <div class="col-md-12 titulos-home-border-left">
@@ -126,7 +164,7 @@
             </div>
             
 
-            <div class="row mb-2">
+          <div class="row mb-2">
             <div class="col-md-12 titulos-home-border-left">
               <h3 class="border-titulo">
                 <span class="titulos-home">
